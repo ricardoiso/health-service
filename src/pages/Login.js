@@ -16,12 +16,13 @@ function Login() {
           class="w-1/3 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col mx-auto"
           style={{ marginTop: "150px" }}
         >
+
           <div class="mb-4">
             <label
               class="block text-grey-darker text-sm font-bold mb-2"
               for="username"
             >
-              Username
+              Usuario
             </label>
             <input
               class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker"
@@ -35,7 +36,7 @@ function Login() {
               class="block text-grey-darker text-sm font-bold mb-2"
               for="password"
             >
-              Password
+              Contraseña
             </label>
             <input
               class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
@@ -43,7 +44,7 @@ function Login() {
               type="password"
               placeholder="******************"
             />
-            <p class="text-red text-xs italic">Please choose a password.</p>
+            <p class="text-red text-xs italic">Por favor ingresa tu contraseña.</p>
           </div>
           <div class="flex items-center justify-between">
             <button
@@ -56,7 +57,7 @@ function Login() {
               class="inline-block align-baseline font-bold text-sm text-blue hover:text-blue-darker"
               href="#"
             >
-              Forgot Password?
+              ¿Olvidaste tu contraseña?
             </a>
           </div>
         </div>
