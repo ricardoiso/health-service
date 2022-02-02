@@ -1,9 +1,16 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Specialties from '../components/Specialties';
+import Doctors from '../components/Doctors';
 
 function Home() {
   return (
     <div>
-        Home
+        <Navbar />
+        <Hero />
+        <Specialties />
+        <Doctors />
     </div>
   );
 }

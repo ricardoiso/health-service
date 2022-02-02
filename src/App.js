@@ -1,4 +1,4 @@
-import SearchBar from './components/SearchBar';
+// import SearchBar from './components/SearchBar';
 import SearchPage from './pages/search'
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
     <div>
       <SearchPage />
     </div>
-  );
+  )
 }
 
 export default App;
