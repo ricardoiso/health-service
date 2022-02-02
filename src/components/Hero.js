@@ -8,7 +8,7 @@ function Hero() {
           <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
             Encuentra el medicamento,
             <br class="hidden lg:inline-block" /> farmacia o doctor que
-            necesitas
+            necesites
           </h1>
           <p class="mb-8 leading-relaxed">
             Esta plataforma está dedicada para ayudarte a conseguir los
