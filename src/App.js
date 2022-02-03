@@ -3,8 +3,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from './pages/Home';
 import Login from './pages/Login';
-import api from './api/post.js';
-
 
 const App = () => (
   <Router>
