@@ -9,10 +9,10 @@ function Navbar() {
           <h1 className="ml-3 text-xl">Servicio de Salud</h1>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <a href='#orgSection' className="mr-5 hover:text-gray-900">Organizaciones</a>
-          <a href='#doctorsSection' className="mr-5 hover:text-gray-900">Doctores</a>
-          <Link to="/search" className="mr-5 hover:text-gray-900">Buscar</Link>
-          {/* <Link to="/login" className='mr-5 hover:text-gray-900'>Inicia Sesión</Link> */}
+          <a href='#orgSection' className="mr-5 hover:font-semibold hover:text-purple-800">Organizaciones</a>
+          <a href='#doctorsSection' className="mr-5 hover:font-semibold hover:text-purple-800">Doctores</a>
+          <Link to="/search" className="mr-5 hover:font-semibold hover:text-purple-800">Buscar</Link>
+          {/* <Link to="/login" className='mr-5 hover:font-semibold hover:text-purple-800'>Inicia Sesión</Link> */}
         </nav>
       </div>
     </header>

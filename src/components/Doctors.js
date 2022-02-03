@@ -1,9 +1,14 @@
 import api from '../api/post.js';
 import React, {useState, useEffect} from 'react';
+import doctorImg1 from '../images/doctor1.jpg';
+import doctorImg2 from '../images/doctor2.jpg';
+import doctorImg3 from '../images/doctor3.jpg';
+import doctorImg4 from '../images/doctor4.jpg';
 
 
 function Doctors() {
   const [doctors, setDoctors] = useState([]);
+  const doctorImgs = [doctorImg1, doctorImg2, doctorImg3, doctorImg4];
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,7 +49,7 @@ function Doctors() {
                 <img
                   alt="team"
                   className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                  src="https://dummyimage.com/200x200"
+                  src={doctorImgs[index]}
                 />
                 <div className="w-full">
                   <h2 className="title-font font-medium text-lg text-gray-900">
