@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { DropdownMenu } from "../components/DropdownMenu.js";
 import Navbar from "../components/Navbar.js"
 import SearchBar from "../components/SearchBar.js"
+import Footer from "../components/Footer"
 import api from '../api/post.js';
 
 function SearchPage() {
@@ -31,7 +32,7 @@ function SearchPage() {
   return (
     <div className="m-4">
       <Navbar />
-      <main className="text-center">
+      <main className="text-center h-screen">
         <h1 className=" sm:text-3xl text-2xl font-medium title-font capitalize py-8 text-gray-900">
           ¿Qué estás buscando?
         </h1>
@@ -122,6 +123,7 @@ function SearchPage() {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
