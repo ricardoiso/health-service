@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/Footer';
 import background from '../images/login.jpg';
 
 function Login() {
@@ -62,6 +63,7 @@ function Login() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
