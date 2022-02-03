@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { DropdownMenu } from "../components/DropdownMenu.js";
 import Navbar from "../components/Navbar.js"
 import SearchBar from "../components/SearchBar.js"
-import { useParams } from "react-router-dom";
 import { useSearch } from "../hooks/useSearch.js";
+import { Link } from 'react-router-dom';
 
 function SearchPage() {
 
@@ -90,7 +90,7 @@ function SearchPage() {
                       {data.categorySelected.slug === 'medical-items' && element.description }
                     </p>
 
-                    <a className="mt-3 text-indigo-500 inline-flex items-center">
+                    <Link to={`../detail/${data.categorySelected.slug}/${element.id}`} className="mt-3 text-indigo-500 inline-flex items-center">
                       Ver Información
                       <svg
                         fill="none"
@@ -100,7 +100,7 @@ function SearchPage() {
                       >
                         <path d="M5 12h14M12 5l7 7-7 7"></path>
                       </svg>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

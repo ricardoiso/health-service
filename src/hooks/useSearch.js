@@ -25,9 +25,6 @@ const useSearch = () => {
     ];
 
     const [categorySelected, setcategorySelected] = useState(categoriesData[2]);
-
-
-    
     
     useEffect(() => {
         const fetchData = async () => {
@@ -70,4 +67,33 @@ const useSearch = () => {
     }
 }
 
-export { useSearch }
+function useSearchByCategoryAndId(category, id) {
+    const [data, setData] = useState();
+    let fetchData;
+
+    useEffect(async () => {
+        switch (category) {
+            case 'medical-items':
+                fetchData = await api.get(`https://hackaton-caracas-2022.herokuapp.com/api/v1/medical_items/${id}.json`) 
+                console.log('Medical Item: ', fetchData);
+                setData(fetchData);
+                break;
+            case 'medical-centers':
+                fetchData = await api.get(`https://hackaton-caracas-2022.herokuapp.com/api/v1/medical_centers/${id}.json`) 
+                console.log('Medical Center: ', fetchData);
+                setData(fetchData);
+                break;
+            case 'doctors':
+                fetchData = await api.get(`https://hackaton-caracas-2022.herokuapp.com/api/v1/doctors/${id}.json`) 
+                console.log('Doctor is: ', fetchData);
+                setData(fetchData);
+            break;
+            default:
+                break;
+        }
+    }, []);
+
+    return data;
+}
+
+export { useSearch, useSearchByCategoryAndId }
