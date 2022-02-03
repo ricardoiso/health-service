@@ -27,9 +27,8 @@ function SearchPage() {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      
+                      
                       className="w-8 h-8"
                       viewBox="0 0 24 24"
                     >
@@ -51,7 +50,7 @@ function SearchPage() {
                         stroke="currentColor"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        stroke-width="2"
+                        
                         className="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
                       >
@@ -67,9 +66,8 @@ function SearchPage() {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      
+                      
                       className="w-10 h-10"
                       viewBox="0 0 24 24"
                     >
@@ -92,7 +90,7 @@ function SearchPage() {
                         stroke="currentColor"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        stroke-width="2"
+                        
                         className="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
                       >

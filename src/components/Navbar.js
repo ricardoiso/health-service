@@ -12,7 +12,7 @@ function Navbar() {
             stroke="currentColor"
             stroke-linecap="round"
             stroke-linejoin="round"
-            stroke-width="2"
+            
             className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
             viewBox="0 0 24 24"
           >
@@ -35,7 +35,7 @@ function Navbar() {
             stroke="currentColor"
             stroke-linecap="round"
             stroke-linejoin="round"
-            stroke-width="2"
+            
             className="w-4 h-4 ml-1"
             viewBox="0 0 24 24"
           >
