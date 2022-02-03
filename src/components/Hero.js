@@ -22,7 +22,7 @@ function Hero() {
             {/* <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button> */}
           </div>
         </div>
-        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <div class="lg:max-w-lg lg:w-full md:w-2/3 w-full">
           <img
             class="object-cover object-center rounded"
             alt="hero"
