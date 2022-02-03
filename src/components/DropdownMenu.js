@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
+import { useSearch } from "../hooks/useSearch.js";
 
 export function DropdownMenu() {
-  const [categorySelected, setCategorySelected] = useState();
+  const { categoriesData:categories, categorySelected } = useSearch();
 
-  const categories = ['Medicamentos', 'Insumos', 'Doctores', 'Centros Médicos'];
-
-    function toggleDropdown(){
-        const dropdownContainer = document.getElementById('dropdownRightStart');
-        dropdownContainer.classList.toggle('hidden');
-        dropdownContainer.classList.toggle('flex');
-    }
+  function toggleDropdown(){
+      const dropdownContainer = document.getElementById('dropdownRightStart');
+      dropdownContainer.classList.toggle('hidden');
+      dropdownContainer.classList.toggle('flex');
+  }
 
 
   return (
@@ -20,7 +19,7 @@ export function DropdownMenu() {
           </button>
 
           {categorySelected && 
-            <div className='inline-block ml-5 mb-3 text-white bg-gradient-to-r from-indigo-500 to-indigo-600 hover:bg-gradient-to-r hover:from-indigo-600 hover:to-indigo-600 rounded-lg text-sm px-4 py-2.5' >{categorySelected}</div>
+            <div className='inline-block ml-5 mb-3 text-white bg-gradient-to-r from-indigo-500 to-indigo-600 hover:bg-gradient-to-r hover:from-indigo-600 hover:to-indigo-600 rounded-lg text-sm px-4 py-2.5' >{categorySelected.name}</div>
           }
 
     <div
@@ -28,13 +27,12 @@ export function DropdownMenu() {
       className="hidden absolute z-10 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
     >
       <ul className="py-1" aria-labelledby="dropdownRightStartButton">
-        { categories.map((category, index) => (
-          <li key={index}>
+        { categories.map(({ slug, name }) => (
+          <li key={slug}>
             <button
-              onClick={() => setCategorySelected(category)}
               className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
             >
-              { category }
+              { name }
             </button>
           </li>  
         ))}

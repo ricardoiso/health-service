@@ -5,7 +5,7 @@ import api from '../api/post.js';
 const useSearch = () => {
     const [data, setData] = useState();
     const { category } = useParams();
-
+    
     const categoriesData = [
         {
             id: 1,
@@ -24,13 +24,16 @@ const useSearch = () => {
         },
     ];
 
-    console.log(category)
+    const [categorySelected, setcategorySelected] = useState(categoriesData[2]);
 
+
+    
+    
     useEffect(() => {
         const fetchData = async () => {
-          try {
-            const { data } = await api.get(
-                getApiUrlByCategory(),
+            try {
+                const { data } = await api.get(
+                    getApiUrlByCategory(category),
             );
             console.log(data);
             setData(data);
@@ -38,11 +41,16 @@ const useSearch = () => {
             console.log(error);
           }
         };
-      
         fetchData();
+
+        setcategorySelected(
+            categoriesData.find(({slug}) => slug == category)
+            ||
+            categoriesData.find(category => category.slug == 'doctors')
+        );
     }, [category]);
 
-    const getApiUrlByCategory = () => {
+    const getApiUrlByCategory = (category) => {
         switch (category) {
             case categoriesData[0].slug:
                 return "https://hackaton-caracas-2022.herokuapp.com/api/v1/medical_items.json"
@@ -57,7 +65,8 @@ const useSearch = () => {
 
     return {
         data,
-        categoriesData
+        categoriesData,
+        categorySelected,
     }
 }
 
