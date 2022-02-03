@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar.js"
 import SearchBar from "../components/SearchBar.js"
 
 function SearchPage() {
+
   return (
     <div className="m-4">
       <Navbar />
