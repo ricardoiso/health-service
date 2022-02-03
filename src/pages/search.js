@@ -21,10 +21,7 @@ function SearchPage() {
       let filterValue = document.getElementById('findInput').value.toLowerCase();
 
       let cards = document.getElementById('cards');
-      /* console.log('cards: ', cards); */
       let cardItems = cards.querySelectorAll('div.card');
-
-      console.log('CARDS ', cardItems);
 
       for (let i = 0; i < cardItems.length; i++) {
         console.log('Cards en i ', cards[i])
