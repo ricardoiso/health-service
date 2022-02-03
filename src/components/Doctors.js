@@ -1,6 +1,25 @@
-import React from 'react';
+import api from '../api/post.js';
+import React, {useState, useEffect} from 'react';
+
 
 function Doctors() {
+  const [posts, setPosts] = useState( [] )
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data } = await api.get(
+          "https://hackaton-caracas-2022.herokuapp.com/api/v1/doctors.json",
+        );
+        console.log(data[3].name);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+  
+    fetchData();
+  }, []);
+
   return (
     <section class="text-gray-600 body-font">
       <div class="container px-5 py-24 mx-auto">
