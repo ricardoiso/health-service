@@ -52,7 +52,7 @@ function SearchPage() {
         <DropdownMenu />
         <SearchBar />
 
-        {doctors.length === 0 && 
+        {data.data.length === 0 && 
           <p className="m-8">
             Espere un momento, estamos seleccionando los mejores resultados para
             su caso...
@@ -78,15 +78,21 @@ function SearchPage() {
                     </svg>
                   </div>
                   <div className="flex-grow">
-                    <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                    <h2 className="w-full text-gray-900 text-lg title-font font-medium mb-3">
                       { element.name }
                     </h2>
+
+                    <h4 className="text-gray-400 ">{ element.email }</h4>
+                  <h4 className="text-gray-400 mb-3">{ element.contact_number }</h4>
+
                     <p className="leading-relaxed text-base">
-                      Blue bottle crucifix vinyl post-ironic four dollar toast
-                      vegan taxidermy. Gastropub indxgo juice poutine.
+                      {data.categorySelected.slug === 'doctors' && element.description.substring(1, element.description.length -1) }
+                      {data.categorySelected.slug === 'medical-centers' && element.description.substring(1, element.description.length -1) }
+                      {data.categorySelected.slug === 'medical-items' && element.description }
                     </p>
+
                     <a className="mt-3 text-indigo-500 inline-flex items-center">
-                      Learn More
+                      Ver Información
                       <svg
                         fill="none"
                         stroke="currentColor"
