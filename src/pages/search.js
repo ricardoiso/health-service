@@ -1,4 +1,5 @@
 import React from "react";
+import { DropdownMenu } from "../components/DropdownMenu.js";
 import Navbar from "../components/Navbar.js"
 import SearchBar from "../components/SearchBar.js"
 
@@ -7,16 +8,17 @@ function SearchPage() {
     <div className="m-4">
       <Navbar />
       <main className="text-center">
-        <h1 className=" sm:text-3xl text-2xl font-medium title-font capitalize mb-4 py-8 text-gray-900">
+        <h1 className=" sm:text-3xl text-2xl font-medium title-font capitalize py-8 text-gray-900">
           ¿Qué estás buscando?
         </h1>
 
+        <DropdownMenu />
         <SearchBar />
 
-        {/* <p className="m-8">
+        <p className="m-8">
           Espere un momento, estamos seleccionando los mejores resultados para
           su caso...
-        </p> */}
+        </p>
 
         <section className="text-gray-600 body-font">
           <div className="container px-5 py-24 mx-auto flex flex-wrap">
@@ -27,8 +29,6 @@ function SearchPage() {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      
-                      
                       className="w-8 h-8"
                       viewBox="0 0 24 24"
                     >
@@ -48,9 +48,6 @@ function SearchPage() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        
                         className="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
                       >
@@ -66,8 +63,6 @@ function SearchPage() {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      
-                      
                       className="w-10 h-10"
                       viewBox="0 0 24 24"
                     >
@@ -88,9 +83,6 @@ function SearchPage() {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        
                         className="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
                       >

@@ -17,11 +17,11 @@ function Hero() {
             productos o medicamentos necesarios para tu tratamiento.
           </p>
           <div className="flex justify-center">
-            <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-              <Link to="search">¿Qué buscas?</Link>
-              
-            </button>
-            {/* <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button> */}
+              <Link to="search">
+                <button className="inline-flex text-white bg-gradient-to-r from-indigo-500 to-indigo-600 border-0 py-2 px-6 focus:outline-none hover:bg-gradient-to-r hover:from-indigo-600 hover:to-indigo-600 rounded text-lg">
+                  ¿Qué buscas?
+                </button>
+              </Link>
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-2/3 w-full">
