@@ -1,4 +1,5 @@
 import React from 'react';
+import MedicGif from '../images/home-medic.gif';
 
 function Hero() {
   return (
@@ -25,7 +26,7 @@ function Hero() {
           <img
             class="object-cover object-center rounded"
             alt="hero"
-            src="https://dummyimage.com/720x600"
+            src={MedicGif}
           />
         </div>
       </div>
