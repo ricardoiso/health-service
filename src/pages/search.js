@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { DropdownMenu } from "../components/DropdownMenu.js";
 import Navbar from "../components/Navbar.js"
 import SearchBar from "../components/SearchBar.js"
-import api from '../api/post.js';
+import { useParams } from "react-router-dom";
+import { useSearch } from "../hooks/useSearch.js";
 
 function SearchPage() {
   const [medicines, setMedicines] = useState([]);
@@ -10,23 +11,10 @@ function SearchPage() {
   const [doctors, setDoctors] = useState([]);
   const [medicalOrg, setMedicalOrg] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data } = await api.get(
-          "https://hackaton-caracas-2022.herokuapp.com/api/v1/doctors.json",
-        );
-        console.log(data);
-        if (data.length !== 0 && doctors.length === 0) {
-          setDoctors(data);
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    };
+  const data = useSearch();
+
+  console.log(data)
   
-    fetchData();
-  }, []);
 
   return (
     <div className="m-4">

@@ -12,6 +12,7 @@ const App = () => (
       <Route exact path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/search" element={<SearchPage />} />
+      <Route path="/search/:category"  element={<SearchPage />} />
     </Routes>
   </Router>
 );
