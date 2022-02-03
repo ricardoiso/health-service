@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSearch } from "../hooks/useSearch.js";
+import { Link } from 'react-router-dom';
 
 export function DropdownMenu() {
   const { categoriesData:categories, categorySelected } = useSearch();
@@ -29,11 +30,14 @@ export function DropdownMenu() {
       <ul className="py-1" aria-labelledby="dropdownRightStartButton">
         { categories.map(({ slug, name }) => (
           <li key={slug}>
-            <button
-              className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-            >
-              { name }
-            </button>
+            <Link to={`../search/${slug}`} >
+              <button
+                onClick={toggleDropdown}
+                className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+              >
+                { name }
+              </button>
+            </Link>
           </li>  
         ))}
       </ul>
