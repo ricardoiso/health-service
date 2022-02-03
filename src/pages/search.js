@@ -6,39 +6,42 @@ import { useParams } from "react-router-dom";
 import { useSearch } from "../hooks/useSearch.js";
 
 function SearchPage() {
-  const [items, setItems] = useState([]);
-  const [centers, setCenters] = useState([]);
-  const [doctors, setDoctors] = useState([]);
 
   const data = useSearch();
-  const category = useParams().category;
   console.log(data);
 
-
-
-  /* try {
-    if (items.length === 0 && centers.length === 0 && doctors.length === 0) {
-      switch (category) {
-        case 'medical-items':
-          setItems(data.data);
-          console.log('Items done: ', items);
-          break;
-          case 'medical-centers':
-            setCenters(data.data);
-            console.log('Centers done: ', centers);
-            break;
-            case 'doctors':
-              setDoctors(data.data);
-              console.log('Doctors done: ', doctors);
-          break;
-        default: 
-          break;
-      } 
+  try {
+    let filterInput = document.getElementById('findInput');
+  
+    if (filterInput) {
+      filterInput.addEventListener('keyup', filterValues);
     }
-  } catch (error) {
-    console.error(error);
-  } */
+  
+    function filterValues() {
+      let filterValue = document.getElementById('findInput').value.toLowerCase();
 
+      let cards = document.getElementById('cards');
+      /* console.log('cards: ', cards); */
+      let cardItems = cards.querySelectorAll('div.card');
+
+      console.log('CARDS ', cardItems);
+
+      for (let i = 0; i < cardItems.length; i++) {
+        console.log('Cards en i ', cards[i])
+        let card = cardItems[i].getElementsByTagName('div')[0];
+
+        if (card.innerHTML.toLowerCase().indexOf(filterValue) > -1) {
+          cardItems[i].style.display = '';
+        } else  {
+          cardItems[i].style.display = 'none';
+        }
+        
+      }
+    }
+    
+  } catch (error) {
+    console.warn(error);
+  }
 
 
   return (
@@ -52,7 +55,7 @@ function SearchPage() {
         <DropdownMenu />
         <SearchBar />
 
-        {data.data.length === 0 && 
+        { data.data && data.data.length === 0 && 
           <p className="m-8">
             Espere un momento, estamos seleccionando los mejores resultados para
             su caso...
@@ -61,11 +64,11 @@ function SearchPage() {
 
         <section className="text-gray-600 body-font">
           <div className="container px-5 py-24 mx-auto flex flex-wrap">
-            <div className="flex flex-wrap -m-4">
+            <div id="cards" className="flex flex-wrap -m-4">
 
               { data.data &&
                 data.data.map((element, index) => (
-                  <div className="p-4 lg:w-1/2 md:w-full" key={index}>
+                  <div className="card p-4 lg:w-1/2 md:w-full" key={index}>
                 <div className="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
                   <div className="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
                     <svg
