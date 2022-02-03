@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { DropdownMenu } from "../components/DropdownMenu.js";
 import Navbar from "../components/Navbar.js"
 import SearchBar from "../components/SearchBar.js"
+import api from '../api/post.js';
 
 function SearchPage() {
+  const [medicines, setMedicines] = useState([]);
+  const [supplies, setSupplies] = useState([]);
+  const [doctors, setDoctors] = useState([]);
+  const [medicalOrg, setMedicalOrg] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data } = await api.get(
+          "https://hackaton-caracas-2022.herokuapp.com/api/v1/doctors.json",
+        );
+        console.log(data);
+        if (data.length !== 0 && doctors.length === 0) {
+          setDoctors(data);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+  
+    fetchData();
+  }, []);
 
   return (
     <div className="m-4">
@@ -16,10 +39,12 @@ function SearchPage() {
         <DropdownMenu />
         <SearchBar />
 
-        <p className="m-8">
-          Espere un momento, estamos seleccionando los mejores resultados para
-          su caso...
-        </p>
+        {doctors.length === 0 && 
+          <p className="m-8">
+            Espere un momento, estamos seleccionando los mejores resultados para
+            su caso...
+          </p>
+        }
 
         <section className="text-gray-600 body-font">
           <div className="container px-5 py-24 mx-auto flex flex-wrap">
