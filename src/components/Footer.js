@@ -9,14 +9,14 @@ function Footer() {
           <span className="inline-flex space-x-4 sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
             <a
               href="https://github.com/JhormaMalave/hackaton-caracas-api"
-              className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0"
+              className="text-sm text-gray-500 hover:text-purple-800 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0"
             >
               Backend
             </a>
 
             <a
               href="https://github.com/ricardoiso/health-service"
-              className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0"
+              className="text-sm text-gray-500 hover:text-purple-800 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0"
             >
               Frontend
             </a>
