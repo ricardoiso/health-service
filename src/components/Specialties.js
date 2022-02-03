@@ -19,7 +19,7 @@ function Specialties() {
       page: 'https://www.instagram.com/fundaparkca/?hl=es'
     },
     {
-      title: 'Alzheimer',
+      title: 'Alzheimer Venezuela',
       img: 'https://pbs.twimg.com/profile_images/1331637189088829440/clZ2T3Rh_400x400.jpg',
       page: 'https://www.sociedadanticancerosa.org/'
     },
@@ -57,7 +57,7 @@ function Specialties() {
   <div className="container px-5 py-12 mx-auto">
     <div className="flex flex-col text-center w-full mb-10">
       <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Organizaciones en Venezuela</h1>
-      <p className="lg:w-2/3 mx-auto leading-relaxed text-base">De Venezuela al mundo</p>
+      <p className="lg:w-2/3 mx-auto leading-relaxed text-base">En la unión está la fuerza, organizaciones sin fines de lucro en el sector salud.</p>
     </div>
     <div className="flex flex-wrap mx-16">
       { organizations.map((org, index) => (
@@ -66,7 +66,7 @@ function Specialties() {
           <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src={ org.img } />
           <div className="flex-grow">
             <h2 className="text-gray-900 title-font font-medium">{ org.title }</h2>
-            <a href={ org.page } className="text-indigo-600 ">Ir a su página<svg className="inline-block ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></a>
+            <a href={ org.page } className="text-indigo-600 ">Ir a su página<svg className="inline-block ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path></svg></a>
           </div>
         </div>
       </div>
