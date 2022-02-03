@@ -19,7 +19,7 @@ function Specialties() {
       page: 'https://www.instagram.com/fundaparkca/?hl=es'
     },
     {
-      title: 'Alzheimer',
+      title: 'Alzheimer Venezuela',
       img: 'https://pbs.twimg.com/profile_images/1331637189088829440/clZ2T3Rh_400x400.jpg',
       page: 'https://www.sociedadanticancerosa.org/'
     },
@@ -57,7 +57,7 @@ function Specialties() {
   <div className="container px-5 py-12 mx-auto">
     <div className="flex flex-col text-center w-full mb-10">
       <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Organizaciones en Venezuela</h1>
-      <p className="lg:w-2/3 mx-auto leading-relaxed text-base">De Venezuela al mundo</p>
+      <p className="lg:w-2/3 mx-auto leading-relaxed text-base">En la unión está la fuerza, organizaciones sin fines de lucro en el sector salud.</p>
     </div>
     <div className="flex flex-wrap mx-16">
       { organizations.map((org, index) => (
