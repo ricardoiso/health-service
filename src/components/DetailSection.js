@@ -39,8 +39,8 @@ export default function DetailSection() {
             {element && slug === 'medical-items' && 
             element.description}
           </p>
-          <h4 className="text-gray-400 ">{ slug === 'doctors' && element.email}</h4>
-          <h4 className="text-gray-400 mb-3">{ slug === 'doctors' && element.contact_number}</h4>
+          {/* {<h4 className="text-gray-400 ">{ slug === 'doctors' && element.email}</h4>
+          <h4 className="text-gray-400 mb-3">{ slug === 'doctors' && element.contact_number}</h4>} */}
           
         </div>
       </div>
